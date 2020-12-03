@@ -1,0 +1,54 @@
+.tasks {
+  margin-top: $size-l;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.task {
+  display: flex;
+  width: 60%;
+  border-bottom: 0.3rem solid #ffd900;
+  margin: $size-s;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  padding: $size-s;
+  border-radius: 2rem;
+}
+
+.task-name {
+  width: 95%;
+  margin: 0;
+  word-spacing: 0.2rem;
+  background-color: #0051ff;
+  color: #ffffff;
+  padding: $size-s;
+  font-size: $font-size-l;
+  font-weight: 300;
+  word-break: break-word;
+  border-radius: 2rem;
+  text-align: center;
+  &:hover {
+    cursor: grab;
+  }
+  &.deleting {
+    background-color: #ee2d2d;
+  }
+}
+
+.addImage {
+  width: 2.5rem;
+  transition: transform 0.3s;
+  &.rotateImage {
+    transform: rotate(135deg);
+  }
+}
+
+@media screen and (max-width: $screen-size) {
+  .tasks {
+    margin-top: 4rem;
+  }
+  .task {
+    width: 80%;
+  }
+}

@@ -1,0 +1,65 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-m;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  border-radius: 1rem;
+  color: #ffffff;
+  width: 50%;
+  margin: $size-s;
+  border: 2px solid #ee3d3d;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: $size-m;
+}
+
+.form-buttons {
+  text-align: center;
+  margin: $size-s;
+}
+
+label {
+  width: 85%;
+  font-size: $font-size-l;
+}
+
+#name,
+#email,
+#password,
+#confirmPassword {
+  border: 0.2rem solid #a1a39f;
+  border-radius: $size-s;
+  outline: none;
+  padding: $size-s;
+  width: 80%;
+  font-size: $font-size-m;
+}
+
+@media screen and (max-width: $screen-size) {
+  .form {
+    width: 90%;
+    margin: $size-s auto;
+  }
+
+  .form-content {
+    margin: $size-s;
+  }
+
+  label {
+    width: 95%;
+    margin-top: $size-s;
+  }
+
+  #name,
+  #email,
+  #password,
+  #confirmPassword {
+    width: 90%;
+    margin: $size-s 0;
+  }
+}

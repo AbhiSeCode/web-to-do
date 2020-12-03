@@ -1,0 +1,11 @@
+.page-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $size-m;
+}
+
+@media screen and (max-width: $screen-size) {
+  .page-section {
+    flex-direction: column;
+  }
+}
