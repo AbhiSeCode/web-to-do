@@ -37,7 +37,7 @@ export const Form = () => {
                             title: 'Welcome to Web To-Do',
                             text: "Let's create some tasks now."
                         })
-                        Cookies.set('uid', user.user.uid)
+                        Cookies.set('uid', user.user.uid, {expires: 365})
                         histroy.push('/dashboard')
                     })
                     .catch((error) => {
@@ -66,7 +66,7 @@ export const Form = () => {
            await firebaseSignin(email,password)
            .then((user) => {
                 setIsLoading(false)  
-                Cookies.set('uid', user.user.uid)
+                Cookies.set('uid', user.user.uid, {expires: 365})
                 histroy.push('/dashboard')
             })
             .catch((error) => {
